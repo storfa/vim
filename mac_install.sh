@@ -16,6 +16,7 @@ rm -r ~/.vim_runtime/sources_non_forked/vim-golang
 # add a few plugins I do want
 git clone git@github.com:fatih/vim-go.git ~/.vim_runtime/sources_non_forked/vim-go
 git clone git@github.com:majutsushi/tagbar.git ~/.vim_runtime/sources_non_forked/tagbar
+git clone git@github.com:Shougo/neocomplete.vim.git ~/.vim_runtime/sources_non_forked/neocomplete
 
 # set my vim config settings
 cp ./my_configs.vim ~/.vim_runtime
