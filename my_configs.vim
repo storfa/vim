@@ -10,8 +10,8 @@ let g:neocomplete#enable_at_startup = 1
 " enable tagbar
 let g:airline#extensions#tagbar#enabled = 1
 
-" Don't fold up so tight
-let javaScript_fold=0         " JavaScript
+" Don't fold up so tight on start
+setl foldlevelstart=2
 
 " NERDTreeIgnore is an array of regular expressions that match 
 " the files you want to exclude.
