@@ -18,6 +18,9 @@ set showmode
 " Remap VIM 0 back to original behavior
 map 0 0
 
+" Open NERDTree
+nmap <F7> :NERDTree<CR>
+
 " Toggle the tagbar on and off
 nmap <F8> :TagbarToggle<CR>
 
