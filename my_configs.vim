@@ -25,7 +25,7 @@ map 0 0
 
 " Toggle the tagbar on and off
 nmap <F8> :TagbarToggle<CR>
-nmap <F7> :NERDTree<CR>
+nmap <F7> :NERDTreeToggle<CR>
 
 " make the f2 button toggle paste mode so pasting doesn't auto indent
 nnoremap <F2> :set invpaste paste?<CR>
