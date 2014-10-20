@@ -5,6 +5,9 @@ brew install macvim --with-cscop --with-lua --HEAD --override-system-vim
 # make sure ctags-exuberant has been installed
 brew install ctags-exuberant
 
+# vim-go requires hg in order for :GoInstallBinaries to succeed
+brew install hg
+
 # get amix's vimrc setup
 git clone git://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
@@ -17,6 +20,10 @@ rm -r ~/.vim_runtime/sources_non_forked/vim-golang
 git clone git@github.com:fatih/vim-go.git ~/.vim_runtime/sources_non_forked/vim-go
 git clone git@github.com:majutsushi/tagbar.git ~/.vim_runtime/sources_non_forked/tagbar
 git clone git@github.com:Shougo/neocomplete.vim.git ~/.vim_runtime/sources_non_forked/neocomplete
+
+# add some color schemes
+mkdir -p ~/.vim_runtime/colors
+curl -o ~/.vim_runtime/colors/molokai.vim https://raw.githubusercontent.com/fatih/molokai/master/colors/molokai.vim
 
 # set my vim config settings
 cp ./my_configs.vim ~/.vim_runtime

@@ -17,6 +17,9 @@ setl foldlevelstart=2
 " the files you want to exclude.
 let NERDTreeIgnore = ['\.pyc$']
 
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -30,3 +33,9 @@ nmap <F7> :NERDTreeToggle<CR>
 " make the f2 button toggle paste mode so pasting doesn't auto indent
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Color Schemes
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+colorscheme molokai
