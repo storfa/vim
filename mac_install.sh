@@ -20,6 +20,7 @@ rm -r ~/.vim_runtime/sources_non_forked/vim-golang
 git clone git@github.com:fatih/vim-go.git ~/.vim_runtime/sources_non_forked/vim-go
 git clone git@github.com:majutsushi/tagbar.git ~/.vim_runtime/sources_non_forked/tagbar
 git clone git@github.com:Shougo/neocomplete.vim.git ~/.vim_runtime/sources_non_forked/neocomplete
+git clone git@github.com:fholgado/minibufexpl.vim.git ~/.vim_runtime/sources_non_forked/minibufexpl
 
 # add some color schemes
 mkdir -p ~/.vim_runtime/colors

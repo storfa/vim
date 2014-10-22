@@ -21,7 +21,7 @@ let NERDTreeIgnore = ['\.pyc$']
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Editing mappings
+" => general mappings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Remap VIM 0 back to original behavior
 map 0 0
@@ -34,6 +34,9 @@ nmap <F7> :NERDTreeToggle<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => vim-go plugin settings/mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Show a list of interfaces which is implemented by the type under your cursor with <leader>s
 au FileType go nmap <Leader>s <Plug>(go-implements)
 
@@ -72,7 +75,17 @@ au FileType go nmap <Leader>e <Plug>(go-rename)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => minibufexpl plugin settings/mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <Leader><Tab> :bn<CR>
+let g:miniBufExplUseSingleClick = 1 "Change buffer with single click on a buffer
+"let g:miniBufExplMapCTabSwitchBufs = 1 "Map control-tab and control-shift-tab for switching between buffers
+"let g:miniBufExplModSelTarget = 1 "If you use other explorers like TagList you can (As of 6.2.8) put:
+"let g:miniBufExplTabWrap = 1 " make tabs show complete (no broken on two lines)
+"let g:miniBufExplMaxSize = 1 " <max lines: defualt 0> setting this to 0 will mean the window gets as big as needed to fit all your buffers.
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color Schemes
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 colorscheme molokai
