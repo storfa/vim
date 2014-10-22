@@ -34,6 +34,43 @@ nmap <F7> :NERDTreeToggle<CR>
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
+" Show a list of interfaces which is implemented by the type under your cursor with <leader>s
+au FileType go nmap <Leader>s <Plug>(go-implements)
+
+" Show type info for the word under your cursor with <leader>i (useful if you have disabled 
+" auto showing type info via g:go_auto_type_info)
+au FileType go nmap <Leader>i <Plug>(go-info)
+
+" Open the relevant Godoc for the word under the cursor with <leader>gd or open it vertically 
+" with <leader>gv
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+
+" Or open the Godoc in browser
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+
+" Run commands, such as go run with <leader>r for the current file 
+au FileType go nmap <leader>r <Plug>(go-run)
+
+" go build and go test for the current package with <leader>b and <leader>t. 
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+
+" Display a beautiful annotated source code to see which functions are covered with <leader>c.
+au FileType go nmap <leader>c <Plug>(go-coverage)
+
+" Replace gd (Goto Declaration) for the word under your cursor (replaces current buffer):
+au FileType go nmap gd <Plug>(go-def)
+
+" Or open the definition/declaration in a new vertical, horizontal or tab for the word under your cursor:
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
+
+" Rename the identifier under the cursor to a new name
+au FileType go nmap <Leader>e <Plug>(go-rename)
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Color Schemes
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
