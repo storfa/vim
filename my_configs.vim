@@ -4,6 +4,10 @@ set nowrap
 " show the '-- INSERT --' line when you're in vi insert mode
 set showmode
 
+" use spaces by default
+set expandtab
+set tabstop=2
+
 " enable newocomplete https://github.com/Shougo/neocomplete.vim
 let g:neocomplete#enable_at_startup = 1
 
