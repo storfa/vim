@@ -1,6 +1,7 @@
 # make sure macvim is installed the way we need
 brew remove macvim
-brew install macvim --with-cscop --with-lua --HEAD --override-system-vim
+#brew install macvim --with-cscop --with-lua --HEAD --override-system-vim
+brew install macvim --with-cscop --with-lua --HEAD --with-override-system-vim
 
 # make sure ctags-exuberant has been installed
 brew install ctags-exuberant
@@ -9,18 +10,19 @@ brew install ctags-exuberant
 brew install hg
 
 # get amix's vimrc setup
-git clone git://github.com/amix/vimrc.git ~/.vim_runtime
+#git clone git://github.com/amix/vimrc.git ~/.vim_runtime
+git clone https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # remove a couple of the plugins I don't want
 rm -r ~/.vim_runtime/sources_non_forked/vim-zenroom2
-rm -r ~/.vim_runtime/sources_non_forked/vim-golang
+#rm -r ~/.vim_runtime/sources_non_forked/vim-golang
 
 # add a few plugins I do want
-git clone git@github.com:fatih/vim-go.git ~/.vim_runtime/sources_non_forked/vim-go
-git clone git@github.com:majutsushi/tagbar.git ~/.vim_runtime/sources_non_forked/tagbar
-git clone git@github.com:Shougo/neocomplete.vim.git ~/.vim_runtime/sources_non_forked/neocomplete
-git clone git@github.com:fholgado/minibufexpl.vim.git ~/.vim_runtime/sources_non_forked/minibufexpl
+#git clone git@github.com:fatih/vim-go.git ~/.vim_runtime/sources_non_forked/vim-go
+git clone https://github.com/majutsushi/tagbar.git ~/.vim_runtime/sources_non_forked/tagbar
+git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim_runtime/sources_non_forked/neocomplete
+git clone https://github.com/fholgado/minibufexpl.vim.git ~/.vim_runtime/sources_non_forked/minibufexpl
 
 # add some color schemes
 mkdir -p ~/.vim_runtime/colors
