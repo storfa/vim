@@ -1,5 +1,14 @@
 " don't wrap long lines
 set nowrap
+set number
+set showcmd
+
+set backup
+set backupdir=~/.vim_runtime/temp_dirs/backup
+set directory=~/.vim_runtime/temp_dirs/swap
+
+" special stuff for git commit messages
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " show the '-- INSERT --' line when you're in vi insert mode
 set showmode
@@ -13,6 +22,9 @@ let g:neocomplete#enable_at_startup = 1
 
 " enable tagbar
 let g:airline#extensions#tagbar#enabled = 1
+
+" save file revisions to local rcs
+let g:rvSaveIfPreviousRCSFileExists = 0
 
 " Don't fold up so tight on start
 setl foldlevelstart=2
@@ -38,6 +50,10 @@ nmap <F7> :NERDTreeToggle<CR>
 " make the f2 button toggle paste mode so pasting doesn't auto indent
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+
+map <F4> ,rlog
+map <F5> ,older
+map <F6> ,newer
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => vim-go plugin settings/mappings

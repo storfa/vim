@@ -23,6 +23,11 @@ rm -r ~/.vim_runtime/sources_non_forked/vim-zenroom2
 git clone https://github.com/majutsushi/tagbar.git ~/.vim_runtime/sources_non_forked/tagbar
 git clone https://github.com/Shougo/neocomplete.vim.git ~/.vim_runtime/sources_non_forked/neocomplete
 git clone https://github.com/fholgado/minibufexpl.vim.git ~/.vim_runtime/sources_non_forked/minibufexpl
+git clone https://github.com/vim-scripts/rcsvers.vim.git ~/.vim_runtime/sources_non_forked/rcsvers.vim
+
+# make sure backup dir exists
+mkdir -p ~/.vim_runtime/temp_dirs/swap
+mkdir -p ~/.vim_runtime/temp_dirs/backup
 
 # add some color schemes
 mkdir -p ~/.vim_runtime/colors
